@@ -16,5 +16,10 @@ namespace AutofacConsole.Interface
         /// </summary>
         /// <param name="content">The content.</param>
         void Write(string content);
+
+        /// <summary>
+        /// Waits this instance.
+        /// </summary>
+        void Wait();
     }
 }

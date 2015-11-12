@@ -32,6 +32,7 @@ namespace AutofacConsole
         public void WriteDate()
         {
             output.Write(DateTime.Today.ToShortDateString());
+            output.Wait();
         }
     }
 }

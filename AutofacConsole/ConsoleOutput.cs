@@ -17,5 +17,13 @@ namespace AutofacConsole
         {
             Console.WriteLine(content);
         }
+
+        /// <summary>
+        /// Waits this instance.
+        /// </summary>
+        public void Wait()
+        {
+            Console.ReadLine();
+        }
     }
 }
