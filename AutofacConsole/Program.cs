@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using Autofac;
-using System.Threading.Tasks;
+﻿using Autofac;
 using AutofacConsole.Interface;
+using Autofac.Configuration;
 
 namespace AutofacConsole
 {
@@ -35,8 +31,7 @@ namespace AutofacConsole
         private static void InitContainer()
         {
             var builder = new ContainerBuilder();
-            builder.RegisterType<ConsoleOutput>().As<IOutput>();
-            builder.RegisterType<TodayWriter>().As<IDateWriter>();
+            builder.RegisterModule(new ConfigurationSettingsReader());
             Container = builder.Build();
         }
 
