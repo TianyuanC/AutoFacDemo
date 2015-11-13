@@ -14,6 +14,6 @@ namespace AutofacConsole.Interface
         /// <summary>
         /// Writes the date.
         /// </summary>
-        void WriteDate();
+        void Write();
     }
 }

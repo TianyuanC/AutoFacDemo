@@ -10,7 +10,7 @@ namespace AutofacConsole
     /// <summary>
     /// Class TodayWriter.
     /// </summary>
-    public class TodayWriter:IDateWriter
+    public class DateWriter : IDateWriter
     {
         /// <summary>
         /// The output
@@ -18,10 +18,10 @@ namespace AutofacConsole
         private readonly IOutput output;
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="TodayWriter"/> class.
+        /// Initializes a new instance of the <see cref="DateWriter"/> class.
         /// </summary>
         /// <param name="output">The output.</param>
-        public TodayWriter(IOutput output)
+        public DateWriter(IOutput output)
         {
             this.output = output;
         }
@@ -29,9 +29,9 @@ namespace AutofacConsole
         /// <summary>
         /// Writes the date.
         /// </summary>
-        public void WriteDate()
+        public void Write()
         {
-            output.Write(DateTime.Today.ToShortDateString());
+            output.Write(DateTime.Now.ToString("O"));
             output.Wait();
         }
     }

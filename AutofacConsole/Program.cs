@@ -43,7 +43,7 @@ namespace AutofacConsole
             using (var scope = Container.BeginLifetimeScope())
             {
                 var writer = scope.Resolve<IDateWriter>();
-                writer.WriteDate();
+                writer.Write();
             }
         }
     }
